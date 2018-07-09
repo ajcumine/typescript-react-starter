@@ -1,0 +1,10 @@
+{
+  "presets": [
+    "@babel/env",
+    [
+      "@babel/stage-0",
+      { "decoratorsLegacy": true, "pipelineProposal": "minimal" }
+    ],
+    "@babel/react"
+  ]
+}
