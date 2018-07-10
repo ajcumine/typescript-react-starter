@@ -1,0 +1,43 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb",
+    "plugin:security/recommended",
+    "prettier",
+    "prettier/react"
+  ],
+  "plugins": ["import", "jsx-a11y", "prettier", "react", "security"],
+  "rules": {
+    "react/jsx-curly-spacing": [2, "never"],
+    "react/jsx-filename-extension": 0,
+    "react/jsx-sort-props": [
+      2,
+      {
+        "noSortAlphabetically": false
+      }
+    ],
+    "quotes": 2,
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/scripts/*.js",
+          "**/config/*.js",
+          "**/*.test.js",
+          "**/mocks/**/*.js"
+        ],
+        "optionalDependencies": false,
+        "peerDependencies": false
+      }
+    ]
+  },
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  }
+}

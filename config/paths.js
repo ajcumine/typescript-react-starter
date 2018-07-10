@@ -1,4 +1,4 @@
-'use strict';
+/* eslint global-require:0, import/no-dynamic-require:0, security/detect-non-literal-fs-filename:0, security/detect-non-literal-require:0 */
 
 const path = require('path');
 const fs = require('fs');
@@ -11,15 +11,15 @@ const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
 
 const envPublicUrl = process.env.PUBLIC_URL;
 
-function ensureSlash(path, needsSlash) {
-  const hasSlash = path.endsWith('/');
+function ensureSlash(filePath, needsSlash) {
+  const hasSlash = filePath.endsWith('/');
   if (hasSlash && !needsSlash) {
-    return path.substr(path, path.length - 1);
-  } else if (!hasSlash && needsSlash) {
-    return `${path}/`;
-  } else {
-    return path;
+    return filePath.substr(filePath, filePath.length - 1);
   }
+  if (!hasSlash && needsSlash) {
+    return `${filePath}/`;
+  }
+  return filePath;
 }
 
 const getPublicUrl = appPackageJson =>
