@@ -91,6 +91,7 @@
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.10.0",
     "eslint-plugin-security": "^1.4.0",
-    "jest": "^23.3.0"
+    "jest": "^23.3.0",
+    "prettier": "^1.13.7"
   }
 }
