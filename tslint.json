@@ -1,0 +1,32 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:latest",
+    "tslint-react",
+    "tslint-eslint-rules",
+    "tslint-config-airbnb",
+    "tslint-plugin-prettier",
+    "tslint-config-prettier",
+    "tslint-config-security"
+  ],
+  "jsRules": {},
+  "rules": {
+    "prettier": [true, "."],
+    "no-implicit-dependencies": false,
+    "import-name": false,
+    "variable-name": [true, "allow-pascal-case"],
+    "react/jsx-curly-spacing": [2, "never"],
+    "react/jsx-sort-props": [
+      2,
+      {
+        "noSortAlphabetically": false
+      }
+    ],
+    "interface-name": false,
+    "object-literal-sort-keys": false,
+    "no-submodule-imports": false,
+    "tsr-detect-html-injection": false
+  },
+  "rulesDirectory": [],
+  "lint": {}
+}
