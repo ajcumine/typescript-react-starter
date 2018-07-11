@@ -67,7 +67,7 @@ function getClientEnvironment(publicUrl) {
       (env, key) => {
         const newEnv = env;
         newEnv[key] = process.env[key];
-        return env;
+        return newEnv;
       },
       {
         // Useful for determining whether we’re running in production mode.
@@ -85,7 +85,7 @@ function getClientEnvironment(publicUrl) {
     'process.env': Object.keys(raw).reduce((env, key) => {
       const newEnv = env;
       newEnv[key] = JSON.stringify(raw[key]);
-      return env;
+      return newEnv;
     }, {}),
   };
 
