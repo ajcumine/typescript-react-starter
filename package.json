@@ -68,6 +68,7 @@
     "@babel/preset-env": "^7.0.0-beta.52",
     "@babel/preset-react": "^7.0.0-beta.52",
     "@babel/preset-stage-0": "^7.0.0-beta.52",
+    "@babel/preset-typescript": "^7.0.0-beta.53",
     "@babel/runtime": "^7.0.0-beta.52",
     "@types/jest": "^23.1.5",
     "@types/react": "^16.4.6",
